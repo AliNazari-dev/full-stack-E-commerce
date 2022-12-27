@@ -1,14 +1,14 @@
-import React from 'react'
-import Navbar from '../components/navbar/Navbar'
-
-
+import "./home.scss";
+import Announcement from "../components/announcement/Announcement";
+import Navbar from "../components/navbar/Navbar";
 
 const Home = () => {
   return (
-    <div >
-        <Navbar/>
+    <div>
+      <Announcement />
+      <Navbar />
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

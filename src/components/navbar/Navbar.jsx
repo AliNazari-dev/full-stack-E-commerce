@@ -6,8 +6,8 @@ import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 
 const Navbar = () => {
   return (
-    <div className='container'>
-      <div className='wrapper'>
+    <div className='navbarcontainer'>
+      <div className='navbarwrapper'>
         <div className='left'>
           <span className='language'>EN </span>
           <div className='searchContainer'>

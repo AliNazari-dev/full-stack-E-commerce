@@ -27,7 +27,7 @@ const Slider = () => {
             </div>
             <div className='infoContainer'>
               <h1 className='title'>{sliderItem[sliderIndex].title}</h1>
-              <p className='desc'>{sliderItem[sliderIndex].descc}</p>
+              <p className='desc'>{sliderItem[sliderIndex].desc}</p>
               <button className='button'>SHOW NOW</button>
             </div>
           </div>

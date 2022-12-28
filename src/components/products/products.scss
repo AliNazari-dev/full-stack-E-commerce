@@ -7,7 +7,7 @@
     cursor: pointer;
     flex: 1;
     margin: 5px;
-    min-width: 280px;
+    min-width: 230px;
     height: 350px;
     display: flex;
     align-items: center;
@@ -21,6 +21,7 @@
 
     img {
       height: 75%;
+      width: 230px;
     }
     .info {
       opacity: 0;

@@ -3,11 +3,10 @@ import { categories } from "../../data";
 import CategoryItem from "../categorItem/CategoryItem";
 
 const Categories = () => {
-  
-  return(
+  return (
     <div className='categoriContainer'>
       {categories.map((item) => (
-        <CategoryItem item={item} />
+        <CategoryItem key={item.id} item={item} />
       ))}
     </div>
   );

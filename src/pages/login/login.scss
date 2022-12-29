@@ -1,0 +1,53 @@
+.loginContainer {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(255, 255, 255, 0.5), rgba(250, 255, 249, 0.5)), url("../../assets/image/registerbg.jpg"), center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .wrapper {
+    width: 30%;
+    padding: 20px;
+    background: #fff;
+
+    .title {
+      font-size: 24px;
+      font-weight: 300;
+    }
+    .form {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      input {
+        flex: 1;
+        min-width: 40%;
+        margin: 10px 0px;
+        padding: 10px;
+        outline-color: teal;
+        border: 0.1px solid rgba(0, 0, 0, 0.146);
+        background: rgba(217, 216, 216, 0.216);
+      }
+      .button {
+        width: 40%;
+        border: none;
+        padding: 10px 20px;
+        background: teal;
+        border-radius: 5px;
+        color: #fff;
+        margin-bottom: 10px;
+        cursor: pointer;
+        &:hover {
+          background: rgb(0, 128, 98);
+        }
+      }
+      .link {
+        text-decoration: none;
+        margin: 5px 0px;
+        font-size: 12px;
+        cursor: pointer;
+        color: #000;
+      }
+    }
+  }
+}

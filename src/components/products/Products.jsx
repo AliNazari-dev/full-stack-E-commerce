@@ -9,7 +9,7 @@ const Products = () => {
     <div className='productsContainer'>
       {popularProduct.map((item) => (
         <div key={item.id} className='container'>
-          <img src={item.img} />
+          <img src={item.img} alt='l' />
           <div className='info'>
             <div className='icon'>
               <FavoriteBorderOutlinedIcon />

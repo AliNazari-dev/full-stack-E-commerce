@@ -1,3 +1,4 @@
+$breakpoint-mobile: 550px;
 .Newscontainer {
   height: 60vh;
   background-color: #fcf5f5;
@@ -13,6 +14,9 @@
     font-size: 24px;
     font-weight: 300;
     margin-bottom: 20px;
+    @media (max-width: $breakpoint-mobile) {
+      text-align: center;
+    }
   }
   .inputContainer {
     width: 50%;
@@ -21,11 +25,14 @@
     display: flex;
     justify-content: space-between;
     border: 1px solid lightgray;
+    @media (max-width: $breakpoint-mobile) {
+      width: 80%;
+    }
     input {
       border: none;
       flex: 8;
       padding-left: 20px;
-      &:focus{
+      &:focus {
         outline: none;
       }
     }

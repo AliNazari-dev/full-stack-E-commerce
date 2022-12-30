@@ -1,7 +1,11 @@
+$breakpoint-mobile: 550px;
 .footerContainer {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  @media (max-width: $breakpoint-mobile) {
+    flex-direction: column;
+  }
   .left {
     flex: 1;
     display: flex;
@@ -24,6 +28,9 @@
   .center {
     flex: 1;
     padding: 20px;
+    @media (max-width: $breakpoint-mobile) {
+      display: none;
+    }
     .title {
       margin-bottom: 30px;
     }

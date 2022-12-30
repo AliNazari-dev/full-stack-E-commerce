@@ -1,3 +1,4 @@
+$breakpoint-mobile: 730px;
 .container {
   .title {
     margin: 20px;
@@ -5,16 +6,29 @@
   .filterContainer {
     display: flex;
     justify-content: space-between;
+    
     .filter {
       margin: 20px;
+      @media (max-width: $breakpoint-mobile) {
+        margin: 20px 15px;
+        display: flex;
+        flex-direction: column;
+      }
       .filterText {
         font-style: 20px;
         font-weight: 600;
         margin-right: 20px;
+        @media (max-width: $breakpoint-mobile) {
+          margin-right: 0px;
+      }
       }
       .select{
         padding: 20px;
         margin-right: 20px;
+        @media (max-width: $breakpoint-mobile) {
+          margin: 10px 0px;
+          width: 200px;
+      }
       }
     }
   }

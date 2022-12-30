@@ -1,10 +1,16 @@
+$breakpoint-mobile: 550px;
+
 .navbarcontainer {
   height: 60px;
+
   .navbarwrapper {
     padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    @media (max-width: $breakpoint-mobile) {
+      padding: 10px 0px;
+    }
     .left {
       display: flex;
       flex: 1;
@@ -12,6 +18,9 @@
       .language {
         font-style: 14px;
         cursor: pointer;
+        @media (max-width: $breakpoint-mobile) {
+          display: none;
+        }
       }
     }
     .searchContainer {
@@ -22,6 +31,9 @@
       padding: 5px;
       input {
         border: none;
+        @media (max-width: $breakpoint-mobile) {
+          width: 50px;
+        }
       }
     }
     .center {
@@ -30,6 +42,9 @@
       .logo {
         flex: 1;
         font-weight: bold;
+        @media (max-width: $breakpoint-mobile) {
+          font-size: 24px;
+        }
       }
     }
     .right {
@@ -37,10 +52,18 @@
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      @media (max-width: $breakpoint-mobile) {
+        justify-content: center;
+        flex: 2;
+      }
       .menuItem {
         font-style: 14px;
         cursor: pointer;
         margin-left: 25px;
+        @media (max-width: $breakpoint-mobile) {
+          font-size: 12px;
+          margin-left: 10px;
+        }
       }
     }
   }

@@ -1,3 +1,4 @@
+$breakpoint-mobile: 550px;
 .registerContainer {
   width: 100vw;
   height: 100vh;
@@ -10,6 +11,9 @@
     width: 40%;
     padding: 20px;
     background: #fff;
+    @media (max-width: $breakpoint-mobile) {
+      width: 75%;
+    }
 
     .title {
       font-size: 24px;

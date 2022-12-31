@@ -2,6 +2,7 @@ import express from "express";
 const app = express();
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+import userRoute from "./routes/user.js";
 
 dotenv.config();
 
@@ -14,9 +15,9 @@ mongoose
     console.log(err);
   });
 
-app.get("/api/test", (req,res) => {
-  res.send("test done")
-});
+//Router
+app.use(express.json( ));
+app.use("/api/user", userRoute);
 
 app.listen(process.env.PORT || 5000, () => {
   console.log("backen server is running");

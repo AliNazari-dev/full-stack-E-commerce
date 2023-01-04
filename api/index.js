@@ -7,7 +7,7 @@ import orderRoute from "./routes/order.js";
 import cartRoute from "./routes/cart.js";
 import productRoute from "./routes/product.js";
 import cookieParser from "cookie-parser";
-
+import cors from "cors";
 dotenv.config();
 const app = express();
 
@@ -21,6 +21,7 @@ mongoose
   });
 
 //Router
+app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
 app.use("/api/auth", authRoute);

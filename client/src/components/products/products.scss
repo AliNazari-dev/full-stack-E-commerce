@@ -2,21 +2,23 @@
   padding: 20px;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: flex-start;
   .container {
     cursor: pointer;
     flex: 1;
     margin: 5px;
-    min-width: 230px;
-    height: 350px;
+    max-width: 280px;
+    height: 310px;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    transition: all 0.5s ease-in;
+    transition: transform 0.5s;
     &:hover {
       background-color: #ffffff;
       transform: scale(1.1);
+      border: 1px solid rgba(118, 117, 117, 0.323);
+      border-radius: 10px;
     }
 
     img {
@@ -28,9 +30,9 @@
       width: 100%;
       height: 100%;
       position: absolute;
-      top: 0;
+      top: 130px;
       left: 0;
-      background: rgba(0, 0, 0, 0.2);
+
       z-index: 3;
       display: flex;
       align-items: center;
@@ -39,17 +41,18 @@
         opacity: 1;
       }
       .icon {
+        border: 1px solid rgba(110, 101, 101, 0.307);
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        background-color: #fff;
+        background-color: rgba(255, 255, 255, 0.895);
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 10px;
         transition: all 0.5s ease-in;
         &:hover {
-          background-color: #ffffff;
+          background-color: #ffffff39;
           transform: scale(1.1);
         }
       }

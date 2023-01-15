@@ -19,6 +19,7 @@ export const sliderItem = [
     title: "SUMMER SALE",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF HOLIDAY",
     bg: "#f7f8fa",
+    
   },
   {
     id: 2,
@@ -26,6 +27,7 @@ export const sliderItem = [
     title: "BEST-SELLERS OF 2022",
     desc: "DON'T COMPROMISE ON STYLE! GET FLAT 30% OFF HOLIDAY",
     bg: "#fff",
+    
   },
   {
     id: 3,
@@ -33,14 +35,15 @@ export const sliderItem = [
     title: "POPULAR",
     desc: "made with Lift Tuck® Technology ,Find your favorite fits here",
     bg: "#e9e8e3",
+   
   },
 ];
 
 export const categories = [
-  { id: 1, img: category1, title: "SHIRT STYLE" },
-  { id: 2, img: category2, title: "LOUNGWEAR LOVE" },
-  { id: 3, img: category3, title: "LIGHT JACKETS" },
-  { id: 4, img: category4, title: "LIGHT JACKETS" },
+  { id: 1, img: category1, title: "SHIRT STYLE", cat: "jacket" },
+  { id: 2, img: category2, title: "LOUNGWEAR LOVE", cat: "coat" },
+  { id: 3, img: category3, title: "LIGHT JACKETS", cat: "women" },
+  { id: 4, img: category4, title: "LIGHT JACKETS", cat: "shirt" },
 ];
 
 export const popularProduct = [
@@ -60,7 +63,6 @@ export const popularProduct = [
     id: 4,
     img: pp4,
   },
-
   {
     id: 5,
     img: pp5,

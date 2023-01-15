@@ -7,16 +7,16 @@ import Register from "./pages/register/Register";
 import Cart from "./pages/cart/Cart";
 
 function App() {
+  const user = true;
   return (
     <BrowserRouter>
       <Routes>
         <Route path={"/"} index element={<Home />} />
-        <Route path={"/product"} element={<ProductList />} />
-        <Route path='/single' element={<Single />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/register' element={<Register />} />
+        <Route path={"/products/:category"} element={<ProductList />} />
+        <Route path={"/product/:productId"} element={<Single />} />
         <Route path='/cart' element={<Cart />} />
-
+        <Route path='/login' element={user ? <Home /> : <Login />} />
+        <Route path='/register' element={user ? <Home /> : <Register />} />
       </Routes>
     </BrowserRouter>
   );

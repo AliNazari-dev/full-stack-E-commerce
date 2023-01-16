@@ -44,7 +44,15 @@ $breakpoint-mobile: 550px;
         &:hover {
           background: rgb(0, 128, 98);
         }
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
       }
+      .error {
+        color: red;
+      }
+
       .link {
         text-decoration: none;
         margin: 5px 0px;

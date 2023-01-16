@@ -5,9 +5,10 @@ import Single from "./pages/single/SingleProduct";
 import Login from "./pages/login/Login";
 import Register from "./pages/register/Register";
 import Cart from "./pages/cart/Cart";
+import { useSelector } from "react-redux";
 
 function App() {
-  const user = true;
+  const user = useSelector((state) => state.user.currentUser);
   return (
     <BrowserRouter>
       <Routes>

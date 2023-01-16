@@ -9,6 +9,8 @@ import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import { useEffect } from "react";
 import { publicRequest } from "../../hooks/requestMethod";
+import { addProduct } from "../../redux/cartRedux";
+import { useDispatch } from "react-redux";
 
 const Single = () => {
   const location = useLocation();
@@ -17,7 +19,7 @@ const Single = () => {
   const [quantity, setQuantity] = useState(1);
   const [color, setColor] = useState("");
   const [size, setSize] = useState("");
-
+  const dispatch = useDispatch();
   useEffect(() => {
     const getProduct = async () => {
       try {
@@ -31,14 +33,16 @@ const Single = () => {
   }, [id]);
 
   const handleQuantity = (q) => {
-    if (q == "add") {
+    if (q === "add") {
       setQuantity(quantity + 1);
     } else {
       setQuantity(quantity !== 1 ? quantity - 1 : 1);
     }
   };
 
-  const handleAddToCart = () => {};
+  const handleAddToCart = () => {
+    dispatch(addProduct({ ...product, quantity, color, size }));
+  };
 
   return (
     <div className='singleContainer'>

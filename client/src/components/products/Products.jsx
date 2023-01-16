@@ -36,6 +36,8 @@ const Products = ({ cat, filters, sort }) => {
     }
   }, [sort]);
 
+   
+
   return (
     <div className='productsContainer'>
       {cat

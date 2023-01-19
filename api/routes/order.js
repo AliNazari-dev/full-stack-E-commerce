@@ -4,7 +4,7 @@ import { verifyAdmin, verifyToken, verifyUser } from "../utils/verifyToken.js";
 const router = express.Router();
 
 //CREATE
-router.post("/", verifyToken, async (req, res) => {
+router.post("/", async (req, res) => {
   const newOrder = new Order(req.body);
 
   try {
@@ -56,14 +56,22 @@ router.get("/", verifyAdmin, async (req, res) => {
 });
 
 //GET MONTHLY INCOME
-router.get("/find/income", verifyAdmin, async (req, res) => {
+router.get("/find/income", async (req, res) => {
+  const productId = req.query.pid;
   const date = new Date();
-  const lastMonths = new Date(date.setMonth(date.getMonth() - 1));
-  const PreviousMonths = new Date(new Date().setMonth(lastMonths.getMonth() - 1));
+  const lastMonth = new Date(date.setMonth(date.getMonth() - 1));
+  const previousMonth = new Date(new Date().setMonth(lastMonth.getMonth() - 1));
 
   try {
-    const income = await User.aggregate([
-      { $match: { createdAt: { $gte: PreviousMonths } } },
+    const income = await Order.aggregate([
+      {
+        $match: {
+          createdAt: { $gte: previousMonth },
+          ...(productId && {
+            products: { $elemMatch: { productId } },
+          }),
+        },
+      },
       {
         $project: {
           month: { $month: "$createdAt" },

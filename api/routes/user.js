@@ -14,23 +14,19 @@ router.get("/:id", verifyUser, async (req, res) => {
 });
 
 //GET All USER
-router.get("/", verifyAdmin, async (req, res) => {
+router.get("/", async (req, res) => {
   const query = req.query.new;
   try {
-    const users = query
-      ? await User.find()
-          .sort({ _id: -1 })
-          .limit(+query || 1)
-      : await User.find();
+    const users = query ? await User.find().sort({ _id: -1 }).limit(15) : await User.find();
     res.status(200).json(users);
-  } catch (error) {
-    res.status(500).json(error);
+  } catch (err) {
+    res.status(500).json(err);
   }
 });
 
 //GET USER STATS
 
-router.get("/find/stats", verifyAdmin, async (req, res) => {
+router.get("/find/stats", async (req, res) => {
   const date = new Date();
   const lastYear = new Date(date.setFullYear(date.getFullYear() - 1));
 

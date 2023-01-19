@@ -1,5 +1,6 @@
 .newProduct {
   flex: 4;
+  margin-left: 30px;
 }
 
 .addProductForm {
@@ -20,10 +21,15 @@
 }
 
 .addProductItem > input {
+  background: lightgray;
+  border-radius: 5px;
   padding: 10px;
+  
+  border: none;
 }
 
 .addProductItem > select {
+  border-radius: 5px;
   padding: 10px;
 }
 
